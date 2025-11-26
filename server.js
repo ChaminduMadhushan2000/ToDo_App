@@ -15,7 +15,7 @@ let todos = [];
 app.get("/", (req, res) => {
   let list = todos.map((t, i) => `<li>${t} <a href="/delete/${i}">❌</a></li>`).join("");
   res.send(`
-    <h1>My To-Do List</h1>
+    <h1>My To-Do List Chamindu </h1>
     <form method="POST" action="/add">
       <input type="text" name="task" placeholder="Enter a task" required>
       <button type="submit">Add</button>
