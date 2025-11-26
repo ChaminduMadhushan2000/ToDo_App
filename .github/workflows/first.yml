@@ -12,7 +12,7 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Configure AWS credentials
-              uses: aws-actions/configure-aws-credintials@v2
+              uses: aws-actions/configure-aws-credeials@v2
               with:
                 aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
                 aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -36,6 +36,6 @@ jobs:
                     
                     # Push the image to ECR
                     docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-                    
+
             - name: Build status
               run: echo "Docker image pushed to ECR successfully!"
