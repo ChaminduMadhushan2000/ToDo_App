@@ -1,13 +1,24 @@
-To-Do App (Node.js + Docker)
+# CI/CD Pipeline Demo with AWS & Docker
 
-A simple To-Do web application built with Node.js and containerized using Docker.  
-This project demonstrates how to build, run, and deploy a Node.js app in a Docker container. A great starting point for DevOps and cloud deployment workflows.
+A modern web application deployed automatically using a continuous integration and delivery pipeline.
 
----
+## 🏗️ Architecture
 
-🚀 Features
+- **Frontend:** React + Vite + TypeScript
+- **Containerization:** Docker
+- **CI/CD:** GitHub Actions
+- **Cloud:** AWS ECR & AWS App Runner
 
-- Add and manage tasks in a simple web UI
-- Built with Node.js + Express
-- Containerized with Docker
-- Ready for deployment to Docker Hub and AWS EC2
+## 🔄 How it Works
+
+1.  Code is pushed to the `main` branch.
+2.  **GitHub Actions** authenticates with AWS using OIDC/Secrets.
+3.  A **Docker image** is built and tagged with the commit SHA.
+4.  The image is pushed to **Amazon ECR**.
+5.  **AWS App Runner** automatically pulls the new image and updates the production service.
+
+## 💻 Local Setup
+
+1. Clone the repo
+2. `npm install`
+3. `npm run dev`
