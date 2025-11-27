@@ -1,0 +1,29 @@
+:root{
+  --bg: #f5f8fb;
+  --card: #ffffff;
+  --accent: linear-gradient(135deg,#00a8ff,#00d4ff);
+  --muted: #8b98a6;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg)}
+.app-shell{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px}
+.card{width:min(920px,92%);background:var(--card);border-radius:12px;padding:36px;box-shadow:0 30px 60px rgba(16,36,56,0.12);}
+.card-header h1{color:#0b90d2;margin:0;font-size:40px}
+.card-header .remaining{color:var(--muted);margin-top:8px}
+.task-input-row{display:flex;gap:12px;align-items:center;margin-top:20px}
+#task-input{flex:1;padding:16px;border-radius:10px;border:1px solid rgba(16,36,56,0.06);background:#f6fbff;font-size:16px;outline:none}
+#add-btn{width:56px;height:48px;border-radius:10px;border:none;background:var(--accent);color:white;font-size:24px;cursor:pointer;box-shadow:0 6px 20px rgba(3,155,229,0.18)}
+.filters{margin-top:22px;display:flex;gap:10px}
+.filters .filter{padding:10px 14px;border-radius:10px;border:1px solid rgba(16,36,56,0.08);background:white;color:#4b5563;cursor:pointer}
+.filters .filter.active{background:linear-gradient(180deg,#00b5ff,#00a3ff);color:white;border:none;box-shadow:0 6px 18px rgba(0,160,255,0.18)}
+.task-list{list-style:none;padding:36px 0 0 0;margin:0;min-height:180px}
+.task-list li{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-radius:10px;border:1px solid rgba(16,36,56,0.04);margin-bottom:12px;background:#fff}
+.task-list li .left{display:flex;align-items:center;gap:12px}
+.checkbox{width:20px;height:20px;border-radius:6px;border:2px solid #cbd5e1;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.checkbox.checked{background:linear-gradient(135deg,#00a8ff,#00d4ff);border:none;color:white}
+.task-text{color:#2b3742}
+.task-text.completed{color:var(--muted);text-decoration:line-through}
+.task-actions button{border:none;background:transparent;cursor:pointer;color:#9aa7b4}
+.placeholder{color:#9aa7b4;text-align:center;padding:48px 0;font-size:16px}
+
+@media (max-width:640px){.card{padding:20px}.card-header h1{font-size:28px}.task-input-row{flex-direction:row}}
