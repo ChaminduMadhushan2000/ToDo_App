@@ -19,6 +19,6 @@ A modern web application deployed automatically using a continuous integration a
 
 ## 💻 Local Setup
 
-1. Clone the rep
+1. Clone the repo
 2. `npm install`
 3. `npm run dev`
